@@ -3,7 +3,9 @@ import { cn } from '@/lib/utils';
 import { Send, Bot, User } from 'lucide-react';
 
 export default function ChatPage() {
-  const { messages, input, handleInputChange, handleSubmit } = useChat();
+  const { messages, input, handleInputChange, handleSubmit } = useChat({
+    api: '/api/chat',
+  });
 
   return (
     <div className="flex flex-col h-screen max-w-4xl mx-auto p-4">
